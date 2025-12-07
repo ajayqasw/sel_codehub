@@ -7,6 +7,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 driver=webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.get("https://letcode.in/")
 driver.maximize_window()
+title = driver.title
+print(title)
 driver.find_element(By.XPATH,'//a[normalize-space()="Explore Workspace"]').click()
 sleep(1)
 driver.find_element(By.XPATH,"//*[text()='Dialog']").click()
