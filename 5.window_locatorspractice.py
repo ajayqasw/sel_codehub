@@ -8,6 +8,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 driver=webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.get("https://letcode.in/")
 driver.maximize_window()
+title = driver.title
+print(title)
 parent_handle=driver.current_window_handle
 print(parent_handle)
 sleep(1)
