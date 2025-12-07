@@ -14,6 +14,8 @@ class DropLocatorPractice:
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.get("https://letcode.in/")
         driver.maximize_window()
+        title = driver.title
+        print(title)
         driver.find_element(By.LINK_TEXT, "Explore Workspace").click()
         element = driver.find_element(By.LINK_TEXT, "AUI - 2")
         driver.execute_script("arguments[0].click();", element)
